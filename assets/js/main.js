@@ -15,7 +15,7 @@ function Pokemon(nombre, color, poderDeAtaque){
 	}
 }
 
-const pikashu = new Pokemon("Pikashu", "Amarillo", 50);
+const pikashu = new Pokemon("Pikashu", "Amarillo", 100);
 const charmander = new Pokemon("Charmander", "Rojo", 20);
 const snorlax = new Pokemon("Snorlax", "Azul", 80);
 const geodude = new Pokemon("Geodude", "Gris", 40);
@@ -25,8 +25,7 @@ console.log(charmander.vida);
 
 function seleccionarPokemon(){
 	var poke1 = document.getElementById("seleccion").value;
-	//primero.innerHTML = pikashu.mostrarPokemon();
-	//console.log(x);
+
 	if(poke1 == "pikashu"){
 		primero.innerHTML = pikashu.mostrarPokemon();
 	}
@@ -40,3 +39,5 @@ function seleccionarPokemon(){
 		primero.innerHTML = geodude.mostrarPokemon();
 	}
 }
+
+
