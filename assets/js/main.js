@@ -16,108 +16,30 @@ function Pokemon(nombre, color, poderDeAtaque){
 	}
 }
 
-const pikashu = new Pokemon("Pikashu", "Amarillo", 90);
-const charmander = new Pokemon("Charmander", "Rojo", 20);
-const snorlax = new Pokemon("Snorlax", "Azul", 80);
-const geodude = new Pokemon("Geodude", "Gris", 40);
 
-var poke1, poke2;
+pikashu = new Pokemon("Pikashu", "Amarillo", 90);
+
+var poke1, poke2, pokeBatalla1, pokeBatalla2;
 
 //pikashu.atacar(charmander);
-console.log(charmander.vida);
+//console.log(charmander.vida);
 
-function seleccionarPokemon(){
+function seleccionarPokemon(s){
 	poke1 = document.getElementById("seleccion").value;
-
-	if(poke1 == "pikashu"){
-		primero.innerHTML = pikashu.mostrarPokemon();
-	}
-	if(poke1 == "charmander"){
-		primero.innerHTML = charmander.mostrarPokemon();
-	}
-	if(poke1 == "snorlax"){
-		primero.innerHTML = snorlax.mostrarPokemon();
-	}
-	if(poke1 == "geodude"){
-		primero.innerHTML = geodude.mostrarPokemon();
-	}
+	pokeBatalla1 = new Pokemon(poke1, "Amarillo", 90);
+	primero.innerHTML = pokeBatalla1.mostrarPokemon();
+	console.log(pokeBatalla1);
 }
 function seleccionarPokemon2(){
 	poke2 = document.getElementById("seleccion2").value;
-
-	if(poke2 == "pikashu"){
-		segundo.innerHTML = pikashu.mostrarPokemon();
-	}
-	if(poke2 == "charmander"){
-		segundo.innerHTML = charmander.mostrarPokemon();
-	}
-	if(poke2 == "snorlax"){
-		segundo.innerHTML = snorlax.mostrarPokemon();
-	}
-	if(poke2 == "geodude"){
-		segundo.innerHTML = geodude.mostrarPokemon();
-	}
+	pokeBatalla2 = new Pokemon(poke2, "Rojo", 40);
+	segundo.innerHTML = pokeBatalla2.mostrarPokemon();
+	//console.log(pokeBatalla1);
 }
 
 function pelear(){
-	//var poke1 = document.getElementById("seleccion").value;
-	//var poke2 = document.getElementById("seleccion2").value;
-	if(poke1 == "pikashu"){
-		if(poke2 == "charmander"){
-			pikashu.atacar(charmander);
-			//tercero.innerHTML = "Vidas de Charmander: " + pokemon.vida;
-		}
-		else if(poke2 == "snorlax"){
-			pikashu.atacar(snorlax);
-			//tercero.innerHTML = "Vidas de Snorlax: " + pokemon.vida;
-		}
-		else if(poke2 == "geodude"){
-			pikashu.atacar(geodude);
-			//tercero.innerHTML = "Vidas de Geodude: " + pokemon.vida;
-		}
+	if(poke1 != poke2){
+		pokeBatalla1.atacar(pokeBatalla2);
 	}
-	if(poke1 == "charmander"){
-		if(poke2 == "pikashu"){
-			charmander.atacar(pikashu);
-			//tercero.innerHTML = "Vidas de Pikashu: " + pokemon.vida;
-		}
-		else if(poke2 == "snorlax"){
-			charmander.atacar(snorlax);
-			//tercero.innerHTML = "Vidas de Snorlax: " + pokemon.vida;
-		}
-		else if(poke2 == "geodude"){
-			charmander.atacar(geodude);
-			//tercero.innerHTML = "Vidas de Geodude: " + pokemon.vida;
-		}
-	}
-	if(poke1 == "snorlax"){
-		if(poke2 == "charmander"){
-			snorlax.atacar(charmander);
-			//tercero.innerHTML = "Vidas de Charmander: " + pokemon.vida;
-		}
-		else if(poke2 == "pikashu"){
-			snorlax.atacar(pikashu);
-			//tercero.innerHTML = "Vidas de Pikashu: " + pokemon.vida;
-		}
-		else if(poke2 == "geodude"){
-			snorlax.atacar(geodude);
-			//tercero.innerHTML = "Vidas de Geodude: " + pokemon.vida;
-		}
-	}
-	if(poke1 == "geodude"){
-		if(poke2 == "charmander"){
-			geodude.atacar(charmander);
-			//tercero.innerHTML = "Vidas de Charmander: " + pokemon.vida;
-		}
-		else if(poke2 == "snorlax"){
-			geodude.atacar(snorlax);
-			//tercero.innerHTML = "Vidas de Snorlax: " + pokemon.vida;
-		}
-		else if(poke2 == "pikashu"){
-			geodude.atacar(pikashu);
-			//tercero.innerHTML = "Vidas de Pikashu: " + pokemon.vida;
-		}
-	}
-
 }
 
