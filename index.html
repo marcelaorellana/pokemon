@@ -6,34 +6,40 @@
 	</head>
 	<body style="background-color:powderblue;">
 		<div align="center">
-			<h1 style="color: #FFF; background: #000">Pokemón</h1>
-			<h3>Selecciona tu Pokemón</h3>
-			<select id="seleccion" onchange="seleccionarPokemon(this)">
-				<option value="" disabled selected>Seleccionar</option>
-			  <option value="pikashu" id="0">Pikashu</option>
-			  <option value="charmander" id="1">Charmander</option>
-			  <option value="snorlax" id="2">Snorlax</option>
-			  <option value="geodude" id="3">Geodude</option>
-			</select>
+		<h1 style="color: #FFF; background: #000">Pokemón</h1>
 		</div>
 		<div align="center">
+		<div style="background-color:#f0cecc; width: 500px; float:center; height: 100px;">
+			<h4>Selecciona tu Pokemón Atacante</h4>
+			<select id="seleccion" onchange="seleccionarPokemon()">
+				<option value="" disabled selected>Seleccionar</option>
+			  <option value="Pikashu" id="0">Pikashu</option>
+			  <option value="Charmander" id="1">Charmander</option>
+			  <option value="Snorlax" id="2">Snorlax</option>
+			  <option value="Geodude" id="3">Geodude</option>
+			</select>
 			<p id="primero"></p>
 		</div>
+		</div>
 		<div align="center">
+		<div style="background-color:#4caf50; width: 500px; float:center; height: 100px;">
+			<h4>Selecciona tu Pokemón Atacado</h4>
 			<select id="seleccion2" onchange="seleccionarPokemon2()">
 				<option value="" disabled selected>Seleccionar</option>
-			  <option value="pikashu" id="pikashu">pikashu</option>
-			  <option value="charmander" id="charmander">charmander</option>
-			  <option value="snorlax" id="snorlax">snorlax</option>
-			  <option value="geodude" id="geodude">geodude</option>
+			  <option value="Pikashu" id="pikashu">Pikashu</option>
+			  <option value="Charmander" id="charmander">Charmander</option>
+			  <option value="Snorlax" id="snorlax">Snorlax</option>
+			  <option value="Geodude" id="geodude">Geodude</option>
 			</select>
-		</div>
-		<div align="center">
 			<p id="segundo"></p>
+		</div>	
 		</div>
 		<div align="center">
+		<div style="background-color:#fddc68; width: 500px; float:center; height: 100px;">
+			<h4>Ataque Pokemón</h4>
 			<button onclick="pelear()">Pelear</button>
 			<p id="tercero"></p>
+		</div>
 		</div>
 
 		<script  type='text/javascript' src='assets/js/main.js'></script>
