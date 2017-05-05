@@ -34,5 +34,8 @@ function pelear(){
 	if(poke1 != poke2){
 		pokeBatalla1.atacar(pokeBatalla2);
 	}
+	else{
+		alert("Elije Pokemones distintos!")
+	}
 }
 
